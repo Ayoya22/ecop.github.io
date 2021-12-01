@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPark Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="">      <!--Location of Server-->
+            <h2 class="main-heading">ECOPARK PAYMENT FORM</h2>
+            <hr>
+            <p>* indicates a required field</p>
+            <h2>User Information</h2>
+            <div>Name: *<input type="text" name="name" placeholder="Ayoya" required></div>
+            <fieldset>
+                <legend>Gender: *</legend>
+                <div class="Gender">
+                    <input type="radio" name="gender" id="male" required>Male
+                    <input type="radio" name="gender" id="female" required>Female
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    </br></br>    
+    <h2 style="text-align: center;">Payment Information</h2>
+
+    <form> 
+        <div class="container">
+       
+        <div>
+            PAIEMENT MOBILE <br>
+            <div>
+                <img src="./images1/orange.jpg" alt="Visa" class="cards" id="visa">
+                <img src="./images1/pay.jpg" alt="Rupay" class="cards" id="rupay">
+                <img src="./images1/mtn.jpg" alt="MasterCard" class="cards" id="mastercard">
+            </div>
+            Reseaux de Paiement: *
+            <select name="card_type" id="card_type" required>
+                <option value="">--Choisissez le reseau</option> //when user first visits it will not be stored in server
+                <option value="visa">MTN Mobile Money</option>
+                <option value="rupay">ORANGE Money</option>
+                
+            </select>
+        </div>
+        <div>
+            Numero de Telephone: * <input type="number" name="card_number" id="card_number"
+                placeholder="691085944 ou 674258852" required>
+        </div>
+        <div>Le Nom sur le Compte: *<input type="text" name="name" placeholder="Ayoya" required></div>
+        <div>
+            Montant a Transferer: * <input type="number" name="cvv" id="cvv" placeholder="50.000">
+        </div>
+        <input type="submit" value="Payer Maintenant">
+        </div>
+    </form></br></br>
+
+           <form> 
+            <div class="container">
+            
+            <div>
+                Accepted Cards <br>
+                <div>
+                    <img src="./images1/Visa.png" alt="Visa" class="cards" id="visa">
+                    <img src="./images1/Rupay.png" alt="Rupay" class="cards" id="rupay">
+                    <img src="./images1/Mastercard.png" alt="MasterCard" class="cards" id="mastercard">
+                </div>
+                Card Type: *
+                <select name="card_type" id="card_type" required>
+                    <option value="">--Select a Card Type</option> //when user first visits it will not be stored in server
+                    <option value="visa">Visa</option>
+                    <option value="rupay">Rupay</option>
+                    <option value="mastercard">MasterCard</option>
+                </select>
+            </div>
+            <div>
+                Card Number: * <input type="number" name="card_number" id="card_number"
+                    placeholder="5555-6666-7777-8888" required>
+            </div>
+            <div>
+                Expiration Date: * <input type="date" name="exp_date" id="exp_date" required>
+            </div>
+            <div>
+                CVV: * <input type="password" name="cvv" id="cvv" placeholder="123">
+            </div>
+            <input type="submit" value="Payer Maintenant">
+            </div>
+        </form>
+
+    </br></br>    
+            
+    
+           
+    
+</body>
+
+</html>
