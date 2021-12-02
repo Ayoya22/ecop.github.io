@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="webthemez">
+    <meta name="author" content="ayoya">
     <title>EcoPark</title>
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     <script src="js/respond.min.js"></script>
       <link rel="shortcut icon" href="images/ico/favicon.ico"> 
     <![endif]-->       
-  
+   
 </head> 
 
 <body id="home">
@@ -378,12 +378,72 @@
 			</div>
 		</section>
    
+
+
+       
+
+
   <section id="portfolio">
+
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title wow fadeInDown">Gallery Photos</h2>
                 <p class="wow fadeInDown">Voici quelque photos de notre magnifique complexe et de ses environ.<br> Nous seron tres honorer de vous acceullir.</p>
             </div>
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 6</div>
+                  <img src="eco/ECO 13.png" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 6</div>
+                  <img src="eco/ECO 14.png" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="eco/ECO 17.png" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="eco/ECO 19.png" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="eco/ECO 22.png" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="eco/ECO 24.png" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                  <span class="dot" onclick="currentSlide(4)"></span>
+                  <span class="dot" onclick="currentSlide(5)"></span>
+                  <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </br>
 
             <div class="text-center" style="display:none;">
                 <ul class="portfolio-filter">
@@ -697,32 +757,25 @@
     </footer><!--/#footer-->
 
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-        
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-          }
-          for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-        }
+        var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
         </script>
 
     <script src="js/jquery.js"></script>
